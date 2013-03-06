@@ -27,14 +27,20 @@ Then as soon as the button is available which it could be in 0.1 seconds instead
 This process completely replaces the "element" api so that you can use waitFor.
 
 ## Features
-* Completely replace element api so we don't have to use sleep any more.
-* Have the optional 3rd parameter that we can pass that will tell it how long to wait (defaut is 10 seconds) before it times out.
+Completely replace element api so we don't have to use sleep any more.
+
+
+Have the optional 3rd parameter that we can pass that will tell it how long to wait (defaut is 10 seconds) before it times out.
+
 ```bash
 it("Should click on the button", function() {
 	waitFor('.myButton', 'Click My Button', 60).click(); // make it wait 60 seconds before timing out because our services are VERY slow.
 });
 ```
-* Have the option of some addional features like focus, blur, etc... and be able to chain them. You can chain on functions that don't return a value.
+
+
+Have the option of some addional features like focus, blur, etc... and be able to chain them. You can chain on functions that don't return a value.
+
 ```bash
 it("Should click on the button", function() {
 	waitFor('.myInput', 'My Name Input').focus().val("Wes");
