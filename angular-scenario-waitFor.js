@@ -146,7 +146,7 @@
             this.label = label;
             this.addFutureAction("wait for element '" + label + "'", function ($window, $document, done) {
                 var interval = $window.setInterval(function () {
-                    var length = $document.elements().find(selector).length;
+                    var length = $document.find(selector).length;
                     if (length) {
                         $window.clearInterval(interval);
                         self.dsl.using(selector, label);
