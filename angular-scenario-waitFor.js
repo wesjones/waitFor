@@ -153,7 +153,7 @@
                         done(null, length);
                     } else if (attempts > timeout) {
                         $window.clearInterval(interval);
-                        done("Timeed out after " + timeout + " seconds. Element for '" + selector + "' was not found.");
+                        done("Timed out after " + timeout + " seconds. Element for '" + selector + "' was not found.");
                     }
                     attempts += 0.01;
                 }, 10);
