@@ -141,7 +141,7 @@
                 self = this;
             if (isNaN(timeout)) {
                 timeout = 10;
-                label = label || timeout; // in case they forgot to pass the timeout. make it still work.
+                label = label || selector; // in case they forgot to pass the label, make it still work.
             }
             this.label = label;
             this.addFutureAction("wait for element '" + label + "'", function ($window, $document, done) {
